@@ -45,7 +45,7 @@ layers:
   - {t: '=', s: +}
   - {t: LANGUAGE 2, h: LEFT WIN}
   - {t: '$$mdi:keyboard-space$$', h: RAISE}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: NUMBER}
   - {t: LANGUAGE 1, h: '$$mdi:apple-keyboard-option$$'}
@@ -100,11 +100,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   RAISE:
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP ASTERISK
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MINUS
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Gui+Ctl+$$mdi:arrow-left-bold$$
+  - Gui+Ctl+$$mdi:arrow-right-bold$$
+  - Gui+$$mdi:keyboard-tab$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - F6
   - F7
@@ -113,11 +113,11 @@ layers:
   - F10
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP DIVIDE
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+Sft+$$mdi:keyboard-tab$$
+  - Ctl+$$mdi:keyboard-tab$$
+  - Sft+Ctl+S
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -128,11 +128,11 @@ layers:
   - F2
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP EQUAL
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Alt+Sft+$$mdi:keyboard-tab$$
+  - Alt+$$mdi:keyboard-tab$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - HOME
@@ -144,8 +144,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - INS
-  - $$mdi:backspace-reverse-outline$$
+  - LANGUAGE 1
+  - LANGUAGE 1
   - {t: '$$mdi:transfer$$', type: trans}
   '4':
   - {t: '$$mdi:transfer$$', type: trans}
