@@ -49,7 +49,7 @@
         tap-ms = <100>;
     };
 
-    layer_listeners {
+    layer_listeners: layer_listeners {
         compatible = "zmk,layer-listeners";
 
         // Call &haptic_feedback_in on layer enter, and &haptic_feedback_out on layer leave
@@ -65,7 +65,7 @@
         };
     };
 
-    keycode_listeners {
+    keycode_listeners: keycode_listeners {
         compatible = "zmk,keycode-listeners";
 
         // Call &haptic_feedback_key_press on key press, and &haptic_feedback_key_release on key release
