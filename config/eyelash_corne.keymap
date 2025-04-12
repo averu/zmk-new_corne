@@ -181,7 +181,7 @@
                                          &trans    &kp LANG2             &trans                                                                      &trans         &trans                 &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&vol_alt_tab>;
         };
 
         lower_layer {
@@ -193,7 +193,7 @@
                         &trans                  &trans                   &trans                                                                         &trans    &kp LANGUAGE_1  &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&vol_alt_tab>;
         };
 
         layer_4 {
