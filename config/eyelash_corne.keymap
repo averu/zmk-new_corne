@@ -65,6 +65,17 @@
         };
     };
 
+    keycode_listeners {
+        compatible = "zmk,keycode-listeners";
+
+        // Call &haptic_feedback_key_press on key press, and &haptic_feedback_key_release on key release
+        a_b_feedback {
+            layers = <NAV NUM>;
+            keycodes = <A B>;
+            bindings = <&haptic_feedback_key_press &haptic_feedback_key_release>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
