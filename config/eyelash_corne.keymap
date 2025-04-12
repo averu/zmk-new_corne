@@ -33,6 +33,27 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        rot_kp: sensor_rotater_kp {
+            compatible = "zmk,behavior-sonsor-rotate-var";
+            #sensor-binding-cels = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mouse_scrl: sensor_whieel_scrl {
+            compatible = "zmk,behavior-sonsor-rotate-var";
+            #sensor-binding-cels = <2>;
+            bindings = <&msc>, <&msc>;
+            tab-ms = <10>;
+        };
+
+        alt_p: alt-positive {
+            compatible = "zmk,behavior-mod-morph";
+            #sensor-binding-cels = <0>;
+            bindings = <&kp 0>, <&kp TAB>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
