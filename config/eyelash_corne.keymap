@@ -33,29 +33,12 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-        alt_tab_fwd: alt_tab_fwd {
+
+        alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
-            label = "ALT_TAB_FWD";
             #binding-cells = <0>;
-            bindings = <
-                &kp LALT      // Alt押し
-                &kp TAB       // Tab押し
-            >;
-            wait-ms = <10>; // 適度なウェイトを入れる
-            tap-ms = <10>;
-        };
-    
-        alt_tab_bwd: alt_tab_bwd {
-            compatible = "zmk,behavior-macro";
-            label = "ALT_TAB_BWD";
-            #binding-cells = <0>;
-            bindings = <
-                &kp LALT
-                &kp LSFT
-                &kp TAB
-            >;
-            wait-ms = <10>;
-            tap-ms = <10>;
+            bindings = <&none>;
+            label = "ALT_TAB";
         };
     };
 
@@ -73,16 +56,19 @@
         tap-ms = <100>;
     };
 
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E                    &kp R        &kp T                                      &kp UP                &kp Y                      &kp U        &kp I                     &kp O    &kp P            &kp MINUS
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D                    &kp F        &kp G                            &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                      &kp J        &kp K                     &kp L    &lt 3 SEMICOLON  &kp SQT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C                    &kp V        &kp B               &kp SPACE              &kp DOWN              &kp N                      &kp M        &kp COMMA                 &kp DOT  &kp FSLH         &kp EQUAL
-                                &mt LEFT_WIN LANGUAGE_2  &lt 2 SPACE  &mt LEFT_SHIFT TAB                                               &mt RIGHT_SHIFT BACKSPACE  &lt 1 ENTER  &mt RIGHT_ALT LANGUAGE_1
+&kp TAB           &kp Q  &kp W  &kp E                    &kp R      &kp T                                        &kp UP                &kp Y                  &kp U            &kp I                     &kp O    &kp P            &kp MINUS
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D                    &kp F      &kp G                              &kp LEFT  &kp ENTER  &kp RIGHT  &kp H                  &kp J            &kp K                     &kp L    &lt 3 SEMICOLON  &kp SQT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C                    &kp V      &kp B                 &kp SPACE              &kp DOWN              &kp N                  &kp M            &kp COMMA                 &kp DOT  &kp FSLH         &kp EQUAL
+                                &mt LEFT_WIN LANGUAGE_2  &lt 2 TAB  &mt LEFT_SHIFT SPACE                                               &mt RIGHT_SHIFT ENTER  &lt 1 BACKSPACE  &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -91,10 +77,10 @@
         Raise {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3    &kp N4                &kp N5                                        &mmv MOVE_UP                     &kp N6         &kp N7                 &kp N8        &kp N9           &kp N0            &kp TILDE
-&trans  &kp LESS_THAN    &kp LEFT_BRACE  &kp LBKT  &kp LEFT_PARENTHESIS  &kp PIPE                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp AMPERSAND  &kp RIGHT_PARENTHESIS  &kp RBKT      &kp RIGHT_BRACE  &kp GREATER_THAN  &kp GRAVE
-&trans  &kp EXCLAMATION  &kp AT_SIGN     &kp HASH  &kp DOLLAR            &kp PERCENT     &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CARET      &kp PLUS               &kp ASTERISK  &kp UNDERSCORE   &kp BSLH          &kp PLUS
-                                         &trans    &kp LANG2             &kp LANGUAGE_2                                                                 &trans         &trans                 &trans
+&trans  &kp N1           &kp N2          &kp N3    &kp N4                &kp N5                                     &mmv MOVE_UP                     &kp N6         &kp N7                 &kp N8        &kp N9           &kp N0            &kp TILDE
+&trans  &kp LESS_THAN    &kp LEFT_BRACE  &kp LBKT  &kp LEFT_PARENTHESIS  &kp PIPE                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp AMPERSAND  &kp RIGHT_PARENTHESIS  &kp RBKT      &kp RIGHT_BRACE  &kp GREATER_THAN  &kp GRAVE
+&trans  &kp EXCLAMATION  &kp AT_SIGN     &kp HASH  &kp DOLLAR            &kp PERCENT  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CARET      &kp PLUS               &kp ASTERISK  &kp UNDERSCORE   &kp BSLH          &kp PLUS
+                                         &trans    &kp LANG2             &trans                                                                      &trans         &trans                 &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -103,10 +89,10 @@
         lower_layer {
             display-name = "RAISE";
             bindings = <
-&trans  &trans  &trans  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &kp LG(TAB)                                  &mmv MOVE_UP                     &kp F6          &kp F7          &kp F8       &kp F9         &kp F10  &kp F11
-&trans  &trans  &trans  &kp LC(LS(TAB))         &kp LC(TAB)              &kp LS(LC(S))                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP       &kp RIGHT      &kp F2   &kp F12
-&trans  &trans  &trans  &kp LA(LS(TAB))         &kp LA(TAB)              &trans         &kp C_MUTE                    &mmv MOVE_DOWN                   &kp HOME        &kp END         &kp PAGE_UP  &kp PAGE_DOWN  &trans   &kp ESC
-                        &trans                  &trans                   &trans                                                                        &kp LANGUAGE_1  &kp LANGUAGE_1  &trans
+&trans  &trans  &trans  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &kp LG(TAB)                                   &mmv MOVE_UP                     &kp F6    &kp F7          &kp UP_ARROW    &kp F9         &kp F10  &kp F11
+&trans  &trans  &trans  &kp LC(LS(TAB))         &kp LC(TAB)              &kp LG(ESCAPE)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp F2   &kp F12
+&trans  &trans  &trans  &trans                  &trans                   &trans          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp HOME  &kp END         &kp PAGE_UP     &kp PAGE_DOWN  &trans   &kp ESC
+                        &trans                  &trans                   &trans                                                                         &trans    &kp LANGUAGE_1  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
