@@ -37,7 +37,7 @@
         alt_p: alt-positive {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp 0>, <&kp TAB>;
+            bindings = <&kp KP_N0>, <&kp TAB>;
 
             mods = <(MOD_LALT|MOD_RALT)>;
             keep-mods = <(MOD_LALT)>;
@@ -46,7 +46,7 @@
         gui_p: gui-positive {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp 0>, <&kp RIGHT>;
+            bindings = <&kp KP_N0>, <&kp RIGHT>;
 
             mods = <(MOD_LGUI|MOD_RGUI)>;
             keep-mods = <(MOD_LGUI)>;
@@ -87,7 +87,7 @@
         alt_n: alt-negative {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp 0>, <&kp LS(TAB)>;
+            bindings = <&kp KP_N0>, <&kp LS(TAB)>;
 
             mods = <(MOD_LALT|MOD_RALT)>;
             keep-mods = <(MOD_LALT)>;
@@ -96,7 +96,7 @@
         gui_n: gui-negative {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp 0>, <&kp LEFT>;
+            bindings = <&kp KP_N0>, <&kp LEFT>;
 
             mods = <(MOD_LGUI|MOD_RGUI)>;
             keep-mods = <(MOD_LGUI)>;
