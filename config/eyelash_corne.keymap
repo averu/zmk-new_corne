@@ -49,33 +49,6 @@
         tap-ms = <100>;
     };
 
-    layer_listeners: layer_listeners {
-        compatible = "zmk,layer-listeners";
-
-        // Call &haptic_feedback_in on layer enter, and &haptic_feedback_out on layer leave
-        nav_num_feedback {
-            layers = <NAV NUM>;
-            bindings = <&haptic_feedback_in &haptic_feedback_out>;
-        };
-
-        // Call &reset_nav on NAV layer leave
-        nav_reset {
-            layers = <NAV>;
-            bindings = <&none &reset_nav>;
-        };
-    };
-
-    keycode_listeners: keycode_listeners {
-        compatible = "zmk,keycode-listeners";
-
-        // Call &haptic_feedback_key_press on key press, and &haptic_feedback_key_release on key release
-        a_b_feedback {
-            layers = <NAV NUM>;
-            keycodes = <A B>;
-            bindings = <&haptic_feedback_key_press &haptic_feedback_key_release>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
