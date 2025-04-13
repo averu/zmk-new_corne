@@ -57,7 +57,7 @@ layers:
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - $$mdi:progress-download$$
   - '&bl BL_INC'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB COLOR HSB(0,0,100)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -76,7 +76,7 @@ layers:
   - RGB SPI
   - RGB BRI
   - RGB HUI
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB SAI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - BT CLR ALL
@@ -87,10 +87,10 @@ layers:
   - RGB TOG
   - '&bl BL_DEC'
   - RGB EFR
-  - RGB SAD
+  - RGB SPD
   - RGB BRD
   - RGB HUD
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB SAD
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
