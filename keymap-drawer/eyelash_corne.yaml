@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-esc$$', h: NUMBER}
   - Q
   - W
   - E
@@ -50,7 +50,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: NUMBER}
   - {t: LANGUAGE 1, h: '$$mdi:apple-keyboard-option$$'}
   NUMBER:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - F1
   - F2
   - F3
