@@ -172,19 +172,19 @@
             sensor-bindings = <&vol_alt_tab>;
         };
 
-        Raise {
+        number {
             display-name = "NUMBER";
             bindings = <
 &trans  &kp N1           &kp N2          &kp N3    &kp N4                &kp N5                                     &mmv MOVE_UP                     &kp N6         &kp N7                 &kp N8        &kp N9           &kp N0            &kp TILDE
 &trans  &kp LESS_THAN    &kp LEFT_BRACE  &kp LBKT  &kp LEFT_PARENTHESIS  &kp PIPE                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp AMPERSAND  &kp RIGHT_PARENTHESIS  &kp RBKT      &kp RIGHT_BRACE  &kp GREATER_THAN  &kp GRAVE
 &trans  &kp EXCLAMATION  &kp AT_SIGN     &kp HASH  &kp DOLLAR            &kp PERCENT  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp CARET      &kp PLUS               &kp ASTERISK  &kp UNDERSCORE   &kp BSLH          &kp PLUS
-                                         &trans    &kp LANG2             &trans                                                                      &trans         &trans                 &trans
+                                         &trans    &kp LANG2             &trans                                                                      &kp BACKSPACE  &trans                 &trans
             >;
 
             sensor-bindings = <&vol_alt_tab>;
         };
 
-        lower_layer {
+        raise {
             display-name = "RAISE";
             bindings = <
 &trans  &kp PAGE_UP     &kp PAGE_DOWN  &kp HOME   &kp END       &kp LG(TAB)                                  &mmv MOVE_UP                     &kp LG(LC(D))  &kp LG(LC(LEFT_ARROW))  &kp UP_ARROW    &kp LG(LC(RIGHT_ARROW))  &kp LG(LC(F4))  &kp ESC
@@ -196,13 +196,16 @@
             sensor-bindings = <&vol_alt_tab>;
         };
 
-        layer_4 {
+        mouse {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                               &mmv MOVE_UP                     &trans  &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mkp MCLK            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans     &trans                    &mmv MOVE_DOWN                   &trans  &trans          &trans          &trans           &trans  &trans
-                        &trans     &mkp MB4   &mkp MB5                                                              &trans  &trans          &trans
+&trans  &trans  &trans     &trans     &trans     &trans                              &mmv MOVE_UP                     &trans     &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &trans                    &mmv MOVE_DOWN                   &trans     &trans          &trans          &trans           &trans  &trans
+                           &trans     &mkp MB4   &mkp MB5                                                             &mkp LCLK  &mkp RCLK       &mkp MCLK
             >;
+
+            label = "MOUSE";
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         layer_5 {
