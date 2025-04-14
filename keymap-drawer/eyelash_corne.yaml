@@ -45,7 +45,7 @@ layers:
   - {t: '=', h: '$$mdi:apple-keyboard-option$$', s: +}
   - {t: LANGUAGE 2, h: LEFT WIN}
   - {t: '$$mdi:keyboard-space$$', h: RAISE}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: NUMBER}
   - {t: LANGUAGE 1, h: LWIN}
